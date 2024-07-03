@@ -2,7 +2,7 @@
 
 if [ -z ${1} ]
 then
-  echo "Please provide a functionality. One of builder-connect | get-creds | clone-repo | build-app | test-app | deploy-app | status"
+  echo "Please provide a functionality. One of builder-connect | get-creds | clone-repo | build-app | test-app | deploy-app | deploy-status"
   exit 1
 fi
 
