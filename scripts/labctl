@@ -9,7 +9,7 @@ fi
 if [ -z ${2} ]
 then
   echo "Please input a task name in the form labctl <task name>"
-  echo "eg: labctl builder-connect get-creds"
+  echo "eg: labctl builder-connect frontend"
   exit 1
 fi
 
