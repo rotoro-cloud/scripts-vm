@@ -2,14 +2,14 @@
 
 if [ -z ${1} ]
 then
-  echo "Please provide a functionality. One of builder-connect | get-creds | clone-repo | build-app | test-app | deploy-app | deploy-status"
+  echo "Please provide a functionality. One of builder-connect | get-creds | clone-repo | build-app | test-app | deploy-app | status"
   exit 1
 fi
 
 if [ -z ${2} ]
 then
   echo "Please input a task name in the form labctl <task name>"
-  echo "eg: labctl builder-connect frontend"
+  echo "eg: labctl frontend get-creds"
   exit 1
 fi
 
