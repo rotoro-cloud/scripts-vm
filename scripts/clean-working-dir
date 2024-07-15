@@ -1,0 +1,4 @@
+cd /home/moon
+GLOBIGNORE=.*
+rm -vr *
+unset GLOBIGNORE

@@ -6,8 +6,10 @@ COPY scripts/ /usr/bin/
 
 RUN cat /usr/bin/deploy.vt- | base64 -d > /usr/bin/deploy.vt \
   && rm -f /usr/bin/deploy.vt- \
-  && chmod +x /usr/bin/builder* /usr/bin/lab* 
+  && chmod +x /usr/bin/builder* /usr/bin/lab* /usr/bin/clean-working-dir
 
 COPY labs /labs
+
+RUN chmod +x /labs/**/*.sh
 
 USER moon
