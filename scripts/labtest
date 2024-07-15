@@ -1,0 +1,14 @@
+export COUNT_DOWN=0
+export POST_LIFT_OFF_DELAY=0
+export STATUS_DELAY=0
+export SHOW_ANIMATION=false
+
+ROCKET_TESTING_PATH=/tmp/test-builds/
+
+rm -rf ${ROCKET_TESTING_PATH} 2> /dev/null
+mkdir -p ${ROCKET_TESTING_PATH}
+
+PWDD=$(pwd)
+cd ${ROCKET_TESTING_PATH}
+
+bash ${PWDD}/$1 $2
