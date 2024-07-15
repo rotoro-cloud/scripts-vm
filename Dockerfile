@@ -4,4 +4,6 @@ RUN yum install -y pv nano expect dash && yum clean all
 
 COPY scripts/ /usr/bin/
 
-RUN chmod +x /usr/bin/*.sh
+RUN cat /usr/bin/deploy.vt- | base64 -d > /usr/bin/deploy.vt \
+  && rm -f /usr/bin/deploy.vt- \
+  && chmod +x /usr/bin/*
