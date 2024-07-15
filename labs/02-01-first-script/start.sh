@@ -1,3 +1,3 @@
 #!/bin/bash
-clean-working-dir
-mv /labs/02-01-first-script/assets/ /root/
+sudo clean-working-dir
+sudo mv /labs/02-01-first-script/assets/ /root/
