@@ -1,6 +1,6 @@
 #!/bin/bash
 
-rm /home/moon/prepare-and-launch_bu; bash /home/moon/backup-file.sh && ls prepare-and-launch_bu
+rm /home/moon/prepare-and-deploy_bu; bash /home/moon/backup-file.sh && ls prepare-and-deploy_bu
 
 if [ $? -ne 0 ]; then
     echo "Скрипт backup-file.sh работает неверно" && exit 1
