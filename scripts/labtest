@@ -3,12 +3,14 @@ export POST_LIFT_OFF_DELAY=0
 export STATUS_DELAY=0
 export SHOW_ANIMATION=false
 
-ROCKET_TESTING_PATH=/tmp/test-builds/
+PRJ_TESTING_PATH=/tmp/test-builds/
 
-rm -rf ${ROCKET_TESTING_PATH} 2> /dev/null
-mkdir -p ${ROCKET_TESTING_PATH}
+if [ -z "$2" ]; then TASK="db-subsystem"; else TASK="$2"; fi;
+
+rm -rf ${PRJ_TESTING_PATH} 2> /dev/null
+mkdir -p ${PRJ_TESTING_PATH}/$TASK
 
 PWDD=$(pwd)
-cd ${ROCKET_TESTING_PATH}
+cd ${PRJ_TESTING_PATH}
 
 bash ${PWDD}/$1 $2
