@@ -7,3 +7,5 @@ COPY scripts/ /usr/bin/
 RUN cat /usr/bin/deploy.vt- | base64 -d > /usr/bin/deploy.vt \
   && rm -f /usr/bin/deploy.vt- \
   && chmod +x /usr/bin/builder* /usr/bin/labctl
+
+  USER moon
