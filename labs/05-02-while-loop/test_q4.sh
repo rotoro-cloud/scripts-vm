@@ -31,5 +31,3 @@ if [ $? -ne 0 ]; then
 fi
 
 clear && echo "Вопрос решен"
-
-bash /labs/05-02-while-loop/prepare_q5.sh
