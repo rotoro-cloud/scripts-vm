@@ -1,1 +1,0 @@
-echo 7 | sh -c "/home/moon/character-code.sh" | grep "character 7 is"

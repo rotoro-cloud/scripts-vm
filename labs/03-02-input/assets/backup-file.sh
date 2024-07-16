@@ -2,7 +2,7 @@
 # Например 'my-pic.jpg' будет забэкаплен как 'my-pic.jpg_bu'
 set -e
 
-file_name="prepare-and-launch"
+file_name="prepare-and-deploy"
 
 cp $file_name ${file_name}_bu
 

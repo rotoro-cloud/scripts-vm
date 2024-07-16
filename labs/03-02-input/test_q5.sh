@@ -1,9 +1,9 @@
 #!/bin/bash
 
-cat /home/moon/backup-file.sh\" | grep "\$1"
+cat /home/moon/backup-file.sh | grep "\$1"
 
 if [ $? -ne 0 ]; then
-    clear && echo 'Скрипт не использует $1 и $2' && exit 1
+    clear && echo 'Скрипт не использует $1' && exit 1
 fi
 
 rm -rf /home/moon/prepare-and-deploy_bu; 
