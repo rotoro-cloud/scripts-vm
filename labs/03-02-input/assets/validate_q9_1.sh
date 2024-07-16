@@ -1,0 +1,1 @@
+echo 7 | sh -c "/home/moon/character-code.sh" | grep U | wc -l | grep 2
