@@ -6,19 +6,19 @@ if [ $? -ne 0 ]; then
     echo 'В файле mcq6.txt нет правильного ответа' && exit 1
 fi
 
-cat /home/moon/mcq6.txt | grep -v '3'
+cat /home/moon/mcq6.txt | grep '3' | wc -l | grep 0
 
 if [ $? -ne 0 ]; then
     echo 'В файле mcq6.txt есть неправильный ответ' && exit 1
 fi
 
-cat /home/moon/mcq6.txt | grep -v '0'
+cat /home/moon/mcq6.txt | grep '0' | wc -l | grep 0
 
 if [ $? -ne 0 ]; then
     echo 'В файле mcq6.txt есть неправильный ответ' && exit 1
 fi
 
-cat /home/moon/mcq6.txt | grep -v '5'
+cat /home/moon/mcq6.txt | grep '5' | wc -l | grep 0
 
 if [ $? -ne 0 ]; then
     echo 'В файле mcq6.txt есть неправильный ответ' && exit 1
