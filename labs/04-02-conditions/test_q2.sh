@@ -6,7 +6,7 @@ if [ $? -ne 0 ]; then
     clear && echo "Cкрипт не работает, если директория не существует" && exit 1
 fi
 
-mkdir -p /home/moon/project-diamond && sh /home/moon/check_dir.sh | grep -i 'Directory OK' && rm -rf /home/moon/project-diamond"
+mkdir -p /home/moon/project-diamond && sh /home/moon/check_dir.sh | grep -i 'Directory OK' && rm -rf /home/moon/project-diamond
 
 if [ $? -ne 0 ]; then
     clear && echo "Cкрипт не работает, если директория существует" && exit 1

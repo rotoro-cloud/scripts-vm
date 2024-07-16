@@ -25,7 +25,7 @@ if [ $? -ne 0 ]; then
     clear &&  echo "Скрипт не использует команды сборщика" && exit 1
 fi
 
-sh -c "MUST_FAIL=true FAILURE_REASON=xz123 starbase-test /home/moon/prepare-and-deploy backend" | awk -v RS='^$' 'END{exit !(index($0,"failed") && index($0,"backend") && index($0,"xz123"))} '
+sh -c "MUST_FAIL=true FAILURE_REASON=xz123 labtest prepare-and-deploy backend" | awk -v RS='^$' 'END{exit !(index($0,"failed") && index($0,"backend") && index($0,"xz123"))} '
 
 if [ $? -ne 0 ]; then
     clear &&  echo "Скрипт не работает как ожидалось" && exit 1
