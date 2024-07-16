@@ -1,6 +1,6 @@
 #!/bin/bash
 
-expect /labs/05-03-case/assets/calculator-test.sh  5 7 13 | grep 10
+expect /tmp/assets/calculator-test.sh  5 7 13 | grep 10
 
 if [ $? -ne 0 ]; then
     clear &&  echo "Скрипт не обновлён" && exit 1

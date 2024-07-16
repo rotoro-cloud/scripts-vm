@@ -12,7 +12,7 @@ if [ $? -ne 0 ]; then
     clear &&  echo "Скрипт не имеет 'this is red'" && exit 1
 fi
 
-bash /home/moon/print-color.sh green" | grep "this is green"
+bash /home/moon/print-color.sh green | grep "this is green"
 
 if [ $? -ne 0 ]; then
     clear &&  echo "Скрипт не имеет 'this is green'" && exit 1
