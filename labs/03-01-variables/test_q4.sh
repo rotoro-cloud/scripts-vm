@@ -3,9 +3,9 @@
 rm /home/moon/prepare-and-deploy_bu; bash /home/moon/backup-file.sh && ls prepare-and-deploy_bu
 
 if [ $? -ne 0 ]; then
-    echo "Скрипт backup-file.sh работает неверно" && exit 1
+    clear && echo "Скрипт backup-file.sh работает неверно" && exit 1
 fi
 
-echo "Вопрос решен"
+clear && echo "Вопрос решен"
 
 bash /labs/03-01-variables/prepare_q5.sh

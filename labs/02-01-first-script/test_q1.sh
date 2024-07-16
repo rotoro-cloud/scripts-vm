@@ -10,21 +10,21 @@ cat /home/moon/prepare-and-deploy | grep mkdir \
 && cat /home/moon/prepare-and-deploy | grep builder-status
 
 if [ $? -ne 0 ]; then
-    echo "В скрипте prepare-and-deploy не хватает команд" && exit 1
+    clear && echo "В скрипте prepare-and-deploy не хватает команд" && exit 1
 fi
 
 ls -l /home/moon/prepare-and-deploy | grep x
 
 if [ $? -ne 0 ]; then
-    echo "Нет разрешений на запуск у prepare-and-deploy" && exit 1
+    clear && echo "Нет разрешений на запуск у prepare-and-deploy" && exit 1
 fi
 
 labtest prepare-and-deploy | grep success
 
 if [ $? -ne 0 ]; then
-    echo "Скрипт не работает" && exit 1
+    clear && echo "Скрипт не работает" && exit 1
 fi
 
-echo "Вопрос решен"
+clear && echo "Вопрос решен"
 
 bash /labs/02-01-first-script/prepare_q2.sh
