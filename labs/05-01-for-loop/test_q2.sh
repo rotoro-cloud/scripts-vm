@@ -1,4 +1,5 @@
 #!/bin/bash
+echo "Внимание, тестирование с циклами может занимать до минуты"
 
 sh -c "export PATH=$PATH:/home/moon; labtest multi-deploy.sh" | awk -v RS='^$' 'END{exit !(index($0,"success") && index($0,"dev-sandbox") && index($0,"stage-sandbox") && index($0,"preprod-sandbox"))} '
 
