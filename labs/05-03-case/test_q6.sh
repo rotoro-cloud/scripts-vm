@@ -6,7 +6,7 @@ if [ $? -ne 0 ]; then
     clear &&  echo "Скрипт не имеет 'Valid options are red and green'" && exit 1
 fi
 
-bash /home/moon/print-color.sh red" | grep "this is red"
+bash /home/moon/print-color.sh red | grep "this is red"
 
 if [ $? -ne 0 ]; then
     clear &&  echo "Скрипт не имеет 'this is red'" && exit 1
@@ -19,3 +19,5 @@ if [ $? -ne 0 ]; then
 fi
 
 clear && echo "Вопрос решен"
+
+echo "Это конец лабораторной"   
