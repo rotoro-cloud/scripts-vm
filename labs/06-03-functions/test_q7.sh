@@ -3,7 +3,7 @@
 cat /home/moon/calculator.sh | grep percentage | grep "()"
 
 if [ $? -ne 0 ]; then
-    clear && echo 'Скрипт не использует функциюpercentage' && exit 1
+    clear && echo 'Скрипт не использует функцию percentage' && exit 1
 fi
 
 expect /tmp/assets/calculator-test.sh 5 10 50 | grep 20
