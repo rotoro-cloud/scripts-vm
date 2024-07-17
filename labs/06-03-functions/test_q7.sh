@@ -15,4 +15,4 @@ fi
 
 clear && echo "Вопрос решен"
 
-bash /labs/06-02-exitcodes/prepare_q8.sh
+bash /labs/06-03-functions/prepare_q8.sh

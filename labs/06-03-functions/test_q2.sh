@@ -11,4 +11,4 @@ fi
 
 clear && echo "Вопрос решен"
 
-bash /labs/06-02-exitcodes/prepare_q3.sh
+bash /labs/06-03-functions/prepare_q3.sh
