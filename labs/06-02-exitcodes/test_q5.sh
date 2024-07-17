@@ -1,9 +1,9 @@
 #!/bin/bash
 
-cat /home/moon/prepare-and-launch | grep exit
+cat /home/moon/prepare-and-deploy | grep exit
 
 if [ $? -ne 0 ]; then
-    clear && echo 'Скрипт использует exit' && exit 1
+    clear && echo 'Скрипт не использует exit' && exit 1
 fi
 
 cat /home/moon/prepare-and-deploy | grep mkdir \

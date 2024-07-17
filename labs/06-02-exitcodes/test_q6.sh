@@ -3,7 +3,7 @@
 cat /home/moon/backup-file.sh | grep set | grep v | grep n
 
 if [ $? -ne 0 ]; then
-    clear && echo 'Скрипт использует set' && exit 1
+    clear && echo 'Скрипт не использует set' && exit 1
 fi
 
 cd /home/moon; 
@@ -14,10 +14,10 @@ if [ $? -ne 0 ]; then
     clear && echo "В скрипте не хватает команд" && exit 1
 fi
 
-ls -al /home/moon/ | grep test_test
+ls -al /home/moon/ | grep test_test | wc -l | grep 0
 
 if [ $? -ne 0 ]; then
-    clear && echo "Скрипт не исполнялся" && exit 1
+    clear && echo "Скрипт исполнялся в рабочем режиме" && exit 1
 fi
 
 clear && echo "Вопрос решен"
