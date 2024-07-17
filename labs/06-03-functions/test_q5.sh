@@ -1,5 +1,11 @@
 #!/bin/bash
 
+bash -c "[[ -x \"/home/moon/func-to-func.sh\" ]]"
+
+if [ $? -ne 0 ]; then
+    clear && echo 'Скрипт не исполняемый' && exit 1
+fi
+
 /home/moon/func-to-func.sh 3 3 | grep worker
 
 if [ $? -ne 0 ]; then
