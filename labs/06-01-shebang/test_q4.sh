@@ -1,5 +1,11 @@
 #!/bin/bash
 
+bash -c "[[ -x \"/home/moon/loop.sh\" ]]"
+
+if [ $? -ne 0 ]; then
+    clear && echo 'Скрипт не исполняемый' && exit 1
+fi
+
 cat /home/moon/loop.sh | grep bash
 
 if [ $? -ne 0 ]; then
