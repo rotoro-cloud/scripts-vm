@@ -1,6 +1,6 @@
 #!/bin/bash
 
-bash vars.sh > /tmp/vars.output
+bash /home/moon/vars.sh > /tmp/vars.output
 
 cat /tmp/vars.output  | grep -A3 'HEREDOC' | head -n 2 | grep -w a && cat /tmp/vars.output  | grep -A3 'HEREDOC' | head -n 3 | grep -w b && cat /tmp/vars.output  | grep -A3 'HEREDOC' | head -n 4 | grep -w c
 

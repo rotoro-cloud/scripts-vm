@@ -2,7 +2,7 @@
 
 rm -rf /tmp/errors_warnings.txt
 
-/home/moon/log_analyse.sh xz 2> errors_warnings.txt
+/home/moon/log_analyse.sh xz 2> /tmp/errors_warnings.txt
 
 echo $? | grep 20
 

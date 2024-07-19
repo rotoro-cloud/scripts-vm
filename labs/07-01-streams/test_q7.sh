@@ -1,7 +1,7 @@
 #!/bin/bash
 
 sudo rm -rf /heredoc_test/
-bash remote.txt
+bash /home/moon/remote.txt
 
 cat /heredoc_test/heredoc.txt | grep 'Shell Scripts'
 
