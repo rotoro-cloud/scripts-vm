@@ -4,17 +4,11 @@ letters_var="a
 b
 c"
 
+#Измени
 letters_heredoc=""
 
-#read -r -d "" letters_heredoc << EOF
-#a
-#b
-#c
-#EOF
-
+#Измени
 letters_herestring=""
-
-#letters_herestring=$(cat <<< $'a\nb\nc')
 
 echo "VAR:"
 echo "$letters_var"

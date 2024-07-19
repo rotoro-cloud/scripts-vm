@@ -12,13 +12,13 @@ rm /tmp/stdout.txt  /tmp/stderr.txt
 cat /tmp/stdout.txt | grep 'This is a standard output'
 
 if [ $? -ne 0 ]; then
-    clear && echo 'Скрипт работает неверно выводит stdout' && exit 1
+    clear && echo 'Скрипт неверно выводит stdout' && exit 1
 fi
 
 cat /tmp/stderr.txt | grep 'This is an error message'
 
 if [ $? -ne 0 ]; then
-    clear && echo 'Скрипт работает неверно выводит stderr' && exit 1
+    clear && echo 'Скрипт неверно выводит stderr' && exit 1
 fi
 
 clear && echo "Вопрос решен"

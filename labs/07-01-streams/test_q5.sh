@@ -18,7 +18,7 @@ if [ $? -ne 0 ]; then
     clear && echo 'Команда в devnull.txt не вызывает err-silenced.sh' && exit 1
 fi
 
-/home/moon/err-silenced.sh 1> /dev/null | grep "Hide an error messages" && /home/moon/err-silenced.sh 1> /dev/null | grep "Hide a standard output" | wc -l | grep 0 && /home/moon/err-silenced.sh 2> /dev/null | grep "Hide a standard output" && /home/moon/err-silenced.sh 2> /dev/null | grep "Hide an error messages" | wc -l | grep 0
+/home/moon/err-silenced.sh 2> /dev/null | grep "Hide a standard output" && /home/moon/err-silenced.sh 2> /dev/null | grep "Hide an error messages" | wc -l | grep 0
 
 if [ $? -ne 0 ]; then
     clear && echo 'Скрипт работает неверно' && exit 1
