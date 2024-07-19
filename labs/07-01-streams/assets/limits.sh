@@ -1,0 +1,1 @@
+ ps aux | awk '{print $2}' | tail -n +2 | xargs -n 1 -I {} cat /proc/{}/limits
