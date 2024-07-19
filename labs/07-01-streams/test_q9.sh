@@ -14,3 +14,4 @@ fi
 
 clear && echo "Вопрос решен"
 
+bash /labs/07-01-streams/prepare_q10.sh
