@@ -20,5 +20,3 @@ fi
 
 
 clear && echo "Вопрос решен"
-
-bash /labs/08-01-arrays/prepare_q3.sh
