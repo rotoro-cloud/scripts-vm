@@ -6,7 +6,9 @@ if [[ -z "${LITER}" || -z "${FLOOR}" ]]; then
     exit 1;
 fi
 
-if [[ ! -f "${1}" ]]; then
+input_file="${1}"
+
+if [[ ! -f "${input_file}" ]]; then
     >&2 echo "No DB file";
     exit 1;
 fi
@@ -16,3 +18,4 @@ column=$((LITER+1))
 row=$((FLOOR+1))
 
 # Your awk code below
+
