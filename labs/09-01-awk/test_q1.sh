@@ -8,6 +8,8 @@ fi
 
 rm  -rf /home/moon/names.txt
 
+/home/moon/get_names.sh dataset.csv
+
 cat /home/moon/names.txt | wc -l | grep 499
 
 if [ $? -ne 0 ]; then
