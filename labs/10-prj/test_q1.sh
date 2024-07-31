@@ -95,4 +95,7 @@ if [ $? -ne 0 ]; then
     clear && echo 'приложение не отвечает на 80 порту' && exit 1
 fi
 
+#REMOVE SSL
+sed -i '/forceScheme/d' /usr/share/nginx/html/public/app/Providers/AppServiceProvider.php
+
 clear && echo "Проект успешно развёрнут решен"
