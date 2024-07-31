@@ -264,20 +264,6 @@ sudo yum -y install firewalld
 # Enable Frewalld
 sudo systemctl enable --now firewalld
 
-# Check Frewalld service is running
-service_running_check firewalld
-
-# Configuring Frewalld
-echo_color_text "Setting up Frewalld.." "green"
-sudo firewall-cmd --permanent --zone=public --add-port=80/tcp
-sudo firewall-cmd --permanent --zone=public --add-port=3306/tcp
-sudo firewall-cmd --reload
-
-# Check Frewalld rules
-firewall_port_check 80
-firewall_port_check 3306
-
-
 
 echo "--------------- Page Testing ---------------"
 
