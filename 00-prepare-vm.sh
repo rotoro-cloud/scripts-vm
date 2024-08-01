@@ -8,6 +8,8 @@ DOWN_CONNECTION=$(nmcli device status | grep disconnected | awk '{print $1}')
 
 nmcli connection add type ethernet ifname $DOWN_CONNECTION
 
+sleep 10
+
 nmcli device status | grep -w connected | wc -l | grep -w 2
 
 if [ $? -ne 0 ]; then

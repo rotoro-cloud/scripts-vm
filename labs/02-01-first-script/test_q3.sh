@@ -1,5 +1,12 @@
 #!/bin/bash
-cd /home/moon && bash /home/moon/create-directories.sh > /tmp/output
+
+bash -c "[[ -x \"/home/moon/create-directories.sh\" ]]"
+
+if [ $? -ne 0 ]; then
+    clear && echo 'Скрипт не исполняемый' && exit 1
+fi
+
+cd /home/moon && /home/moon/create-directories.sh > /tmp/output
 
 if [ $? -ne 0 ]; then
     clear && echo "Скрипт не работает" && exit 1
