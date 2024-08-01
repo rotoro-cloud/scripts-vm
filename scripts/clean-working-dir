@@ -1,6 +1,6 @@
 cd /home/moon
 GLOBIGNORE=.*
-rm -vr *
+rm -vr * 2> /dev/null
 unset GLOBIGNORE
 
 sudo rm -rf /bin/sh
