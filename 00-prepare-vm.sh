@@ -6,16 +6,16 @@ if [ $? -ne 0 ]; then
     clear && echo 'problems with changing users' && exit 1
 fi
 
-sed 's~metalink=https://mirrors.centos.org/metalink?repo=centos-baseos-$stream&arch=$basearch&protocol=https,http~baseurl=https://mirror.yandex.ru/centos-stream/9-stream/BaseOS/x86_64/os/~g' -i /etc/yum.repos.d/centos.repo && sed 's~metalink=https://mirrors.centos.org/metalink?repo=centos-appstream-$stream&arch=$basearch&protocol=https,http~baseurl=https://mirror.yandex.ru/centos-stream/9-stream/AppStream/x86_64/os/~g' -i /etc/yum.repos.d/centos.repo && sed 's~metalink=https://mirrors.centos.org/metalink?repo=centos-crb-$stream&arch=$basearch&protocol=https,http~baseurl=https://mirror.yandex.ru/centos-stream/9-stream/CRB/x86_64/os/~g' -i /etc/yum.repos.d/centos.repo
-
-if [ $? -ne 0 ]; then
-    clear && echo 'problems with patching repository lists' && exit 1
-fi
-
 yum install -y dnf-plugins-core  && dnf config-manager --set-enabled crb && yum install -y epel-release epel-next-release
 
 if [ $? -ne 0 ]; then
     clear && echo 'problems adding repositories' && exit 1
+fi
+
+sed 's~metalink=https://mirrors.centos.org/metalink?repo=centos-baseos-$stream&arch=$basearch&protocol=https,http~baseurl=https://mirror.yandex.ru/centos-stream/9-stream/BaseOS/x86_64/os/~g' -i /etc/yum.repos.d/centos.repo && sed 's~metalink=https://mirrors.centos.org/metalink?repo=centos-appstream-$stream&arch=$basearch&protocol=https,http~baseurl=https://mirror.yandex.ru/centos-stream/9-stream/AppStream/x86_64/os/~g' -i /etc/yum.repos.d/centos.repo && sed 's~metalink=https://mirrors.centos.org/metalink?repo=centos-crb-$stream&arch=$basearch&protocol=https,http~baseurl=https://mirror.yandex.ru/centos-stream/9-stream/CRB/x86_64/os/~g' -i /etc/yum.repos.d/centos.repo
+
+if [ $? -ne 0 ]; then
+    clear && echo 'problems with patching repository lists' && exit 1
 fi
 
 yum install -y iproute iputils net-tools ncurses sshpass pv nano expect dash bc
