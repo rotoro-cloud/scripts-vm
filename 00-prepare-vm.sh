@@ -1,6 +1,18 @@
 #!/bin/bash
 
 userdel moon
+sed '/^%wheel/d' /etc/sudoers
+echo '%wheel         ALL = (ALL) NOPASSWD: ALL' >> /etc/sudoers
+
+DOWN_CONNECTION=$(nmcli device status | grep disconnected | awk '{print $1}')
+
+nmcli connection add type ethernet ifname $DOWN_CONNECTION
+
+nmcli device status | grep -w connected | wc -l | grep -w 2
+
+if [ $? -ne 0 ]; then
+    clear && echo 'no 2 working network connections' && exit 1
+fi
 
 echo 'root:planet3' | chpasswd && adduser moon && echo 'moon:selena' | chpasswd && usermod -aG wheel moon
 
