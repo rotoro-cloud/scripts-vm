@@ -1,4 +1,4 @@
-FROM rotorocloud/centos9s-sysd-ssh-controller:moon
+FROM rotorocloud/centos9s-sysd-ssh-master:moon-devstr01
 
 RUN yum install -y pv nano expect dash bc && yum clean all
 
