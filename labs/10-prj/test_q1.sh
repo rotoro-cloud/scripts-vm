@@ -3,12 +3,6 @@
 sudo /tmp/destroy.sh
 bash /home/moon/deploy-estate-application.sh
 
-yum list --installed firewalld | grep -w firewalld
-
-if [ $? -ne 0 ]; then
-    clear && echo 'firewalld не установлен' && exit 1
-fi
-
 yum list --installed mariadb-server | grep -w mariadb-server
 
 if [ $? -ne 0 ]; then
@@ -98,4 +92,4 @@ fi
 #REMOVE SSL
 sed -i '/forceScheme/d' /usr/share/nginx/html/public/app/Providers/AppServiceProvider.php
 
-clear && echo "Проект успешно развёрнут решен"
+clear && echo "Проект успешно развёрнут"
