@@ -1,5 +1,11 @@
 #!/bin/bash
 
+[ -f /home/moon/linux-pkg-info.sh ]
+
+if [ $? -ne 0 ]; then
+    clear && echo 'Нет файла linux-pkg-info.sh' && exit 1
+fi
+
 bash /home/moon/linux-pkg-info.sh Debian | grep apt
 
 if [ $? -ne 0 ]; then

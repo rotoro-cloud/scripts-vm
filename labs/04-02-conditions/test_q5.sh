@@ -1,5 +1,11 @@
 #!/bin/bash
 
+[ -f /home/moon/print-month-name.sh ]
+
+if [ $? -ne 0 ]; then
+    clear && echo 'Нет файла print-month-name.sh' && exit 1
+fi
+
 bash /home/moon/print-month-name.sh 10 | grep -i october
 
 if [ $? -ne 0 ]; then

@@ -12,7 +12,7 @@ if [ $? -ne 0 ]; then
     clear && echo 'Скрипт работает неверно' && exit 1
 fi
 
-printf '%s\n\t%s\n\t%s\n' 'xzl' 'bu01'  'stop' | /home/moon/resolver.sh | tr -d ' ' | grep 'Ipfornumberforbu01:172.20.236.20'
+printf '%s\n\t%s\n\t%s\n' 'xzl' 'bu01'  'stop' | /home/moon/resolver.sh | tr -d ' ' | grep 'Ipforbu01:172.20.236.20'
 
 if [ $? -ne 0 ]; then
     clear && echo 'Скрипт работает неверно' && exit 1

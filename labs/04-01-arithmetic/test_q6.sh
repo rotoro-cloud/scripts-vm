@@ -1,5 +1,11 @@
 #!/bin/bash
 
+[ -f /home/moon/average.sh ]
+
+if [ $? -ne 0 ]; then
+    clear && echo 'Нет файла average.sh' && exit 1
+fi
+
 bash /home/moon/average.sh 3 1 4 | grep "2.666"
 
 if [ $? -ne 0 ]; then

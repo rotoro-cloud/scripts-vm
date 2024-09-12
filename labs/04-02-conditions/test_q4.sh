@@ -1,5 +1,11 @@
 #!/bin/bash
 
+[ -f /home/moon/compare-strings.sh ]
+
+if [ $? -ne 0 ]; then
+    clear && echo 'Нет файла compare-strings.sh' && exit 1
+fi
+
 bash /home/moon/compare-strings.sh | grep -i "Zero length"
 
 if [ $? -ne 0 ]; then

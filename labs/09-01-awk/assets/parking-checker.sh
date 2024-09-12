@@ -17,5 +17,7 @@ fi
 column=$((LITER+1))
 row=$((FLOOR+1))
 
+echo "Checking for floor #${FLOOR} and liter ${LITER}" 
+
 # Your awk code below
 

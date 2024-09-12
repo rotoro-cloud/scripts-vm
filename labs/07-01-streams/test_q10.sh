@@ -2,7 +2,7 @@
 
 rm -f /tmp/output_curl
 
-bash /home/moon/limits.sh > /tmp/output_curl
+timeout 15s bash /home/moon/limits.sh > /tmp/output_curl
 
 all=$(cat /tmp/output_curl | wc -l)
 

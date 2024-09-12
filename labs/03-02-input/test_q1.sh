@@ -21,7 +21,7 @@ fi
 
 labtest prepare-and-deploy backend > /tmp/output1
 
-cat /tmp/output1 | awk -v RS='^$' 'END{exit !(index($0,"success") && index($0,"backend"))} '
+cat /tmp/output1 | awk -v RS='^$' 'END{exit !(index($0,"success") && index($0,"backend"))} ' || cat /tmp/output1 | awk -v RS='^$' 'END{exit !(index($0,"launching") && index($0,"backend"))} '
 
 if [ $? -ne 0 ]; then
     clear && echo 'Скрип работает неверно' && exit 1

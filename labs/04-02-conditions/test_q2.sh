@@ -1,5 +1,11 @@
 #!/bin/bash
 
+[ -f /home/moon/check_dir.sh ]
+
+if [ $? -ne 0 ]; then
+    clear && echo 'Нет файла check_dir.sh' && exit 1
+fi
+
 rm -rf /home/moon/project-diamond && sh /home/moon/check_dir.sh | grep -i 'No directory'
 
 if [ $? -ne 0 ]; then

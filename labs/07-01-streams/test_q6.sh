@@ -1,5 +1,11 @@
 #!/bin/bash
 
+[ -f /home/moon/ss.sh ]
+
+if [ $? -ne 0 ]; then
+    clear && echo 'Нет файла ss.sh' && exit 1
+fi
+
 bash -c "[[ -x \"/home/moon/ss.sh\" ]]"
 
 if [ $? -ne 0 ]; then

@@ -1,5 +1,11 @@
 #!/bin/bash
 
+[ -f /home/moon/err-silenced.sh ]
+
+if [ $? -ne 0 ]; then
+    clear && echo 'Нет файла err-silenced.sh' && exit 1
+fi
+
 bash -c "[[ -x \"/home/moon/err-silenced.sh\" ]]"
 
 if [ $? -ne 0 ]; then

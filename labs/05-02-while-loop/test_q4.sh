@@ -1,5 +1,11 @@
 #!/bin/bash
 
+[ -f /home/moon/limit-loop.sh ]
+
+if [ $? -ne 0 ]; then
+    clear && echo 'Нет файла limit-loop.sh' && exit 1
+fi
+
 bash /home/moon/limit-loop.sh 11 19 | wc -l | grep 4
 
 if [ $? -ne 0 ]; then

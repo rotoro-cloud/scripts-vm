@@ -22,3 +22,5 @@ if [ $? -ne 0 ]; then
 fi
 
 bash /labs/07-01-streams/prepare_q8.sh
+
+clear && echo "Вопрос решен"

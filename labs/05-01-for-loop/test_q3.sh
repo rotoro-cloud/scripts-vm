@@ -1,5 +1,11 @@
 #!/bin/bash
 
+[ -f /home/moon/loop.sh ]
+
+if [ $? -ne 0 ]; then
+    clear && echo 'Нет файла loop.sh' && exit 1
+fi
+
 bash /home/moon/loop.sh | egrep '11|12|13|14|15|16|17|18|19' | sort -u | wc -l | grep 9
 
 if [ $? -ne 0 ]; then

@@ -28,7 +28,7 @@ if [[ ! -s "${1}" ]]; then
 fi
 
 book_to_process="${1}"
-fixed_book="/usr/local/books/$(basename "${2}")"
+fixed_book="/home/moon/$(basename "${2}")"
 
 echo "Enter 1 if you want to process uneven lines, or 2 if you want to process even lines:"
 read -r choice
