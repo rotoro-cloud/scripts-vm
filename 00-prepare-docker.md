@@ -29,6 +29,7 @@ docker exec -it centos bash
 В некторых установках пароль может не принимать. Это проблемы реализации docker в разных ОС.
 Известные трудности/решения:
 - Docker Desktop for Windows. В настройках установить галочку `Add the *.docker.internal names to the host's /etc/hosts file (Requires password)`
+
   после этого можно подключаться как `ssh moon@host.docker.internal -p 22`
 
 3. Лабораторные находятся в папке `/labs`. Для начала внутри linux-консоли запусти файл `start.sh` для выбранной лабораторной.
