@@ -1,2 +1,7 @@
 cd /home/moon
-/bin/bash -c "GLOBIGNORE=.*; rm -vr * 2> /dev/null; unset GLOBIGNORE; sudo rm -rf /bin/sh; sudo ln -s /bin/bash /bin/sh;"
+GLOBIGNORE=.*
+rm -vr * 2> /dev/null
+unset GLOBIGNORE
+
+sudo rm -rf /bin/sh
+sudo ln -s /bin/bash /bin/sh
